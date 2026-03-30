@@ -4,36 +4,42 @@ import { servicesData } from '../../data/servicesData'
 
 const Services = () => {
   return (
-    <section id="services" className="border-b border-white/10">
-      <div className="flex flex-col md:flex-row items-start md:items-end justify-between px-6 md:px-12 pt-20 pb-12 border-b border-white/10 gap-5">
-        <div>
-          <div className="flex items-center gap-2 mb-4 font-mono text-[10.5px] tracking-[0.2em] uppercase text-gold after:w-8 after:h-px after:bg-gold/50 after:ml-2">
-            What I Offer
+    <section id="services" className="py-24 px-6 md:px-12 border-b border-white/10">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-px bg-gold"></div>
+            <span className="text-gold font-mono text-xs tracking-wider">WHAT I DO</span>
+            <div className="w-8 h-px bg-gold"></div>
           </div>
-          <h2 className="font-display text-[clamp(52px,6vw,86px)] leading-[0.95] mb-0">
-            MY<br/>SERVICES
-          </h2>
+          <h2 className="font-display text-5xl md:text-6xl mb-4">My Services</h2>
+          <p className="text-grey max-w-2xl mx-auto">
+            From interactive web apps to AR experiences — I deliver end-to-end solutions with clean code and sharp design.
+          </p>
         </div>
-        <p className="text-[13px] text-grey max-w-[320px] leading-relaxed">
-          From interactive web apps to AR experiences — I deliver end-to-end solutions with clean code and sharp design.
-        </p>
-      </div>
-      
-      <div className="grid md:grid-cols-2 lg:grid-cols-4">
-        {servicesData.map((service, idx) => (
-          <RevealOnScroll key={idx} className="svc-card p-8 md:p-10 lg:p-11 border-r border-white/10 relative overflow-hidden hover:bg-bg2 transition-all group cursor-pointer">
-            <span className="font-mono text-[11px] text-grey tracking-[0.12em] block mb-8">{service.num}</span>
-            <span className="text-4xl mb-5 block">{service.icon}</span>
-            <div className="font-display text-2xl md:text-3xl tracking-[0.02em] mb-3 leading-tight">
-              {service.name}
-            </div>
-            <p className="text-[12.5px] text-grey leading-relaxed">{service.desc}</p>
-            <span className="inline-block mt-6 text-[9.5px] tracking-[0.14em] uppercase text-gold bg-gold/10 border border-gold/20 px-2.5 py-1 rounded">
-              {service.tags}
-            </span>
-            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-gold to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left"></div>
-          </RevealOnScroll>
-        ))}
+
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {servicesData.map((service, idx) => (
+            <RevealOnScroll key={idx}>
+              <div className="group p-8 bg-bg2 rounded-2xl border border-white/10 hover:border-gold/50 transition-all duration-300 hover:-translate-y-2">
+                <div className="text-5xl mb-6">{service.icon}</div>
+                <h3 className="font-display text-2xl mb-3 group-hover:text-gold transition-colors">
+                  {service.name}
+                </h3>
+                <p className="text-grey text-sm leading-relaxed mb-4">{service.desc}</p>
+                <div className="flex flex-wrap gap-2">
+                  {service.tags.split(' · ').map((tag, tagIdx) => (
+                    <span key={tagIdx} className="text-xs text-gold/70 bg-gold/5 px-2 py-1 rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </RevealOnScroll>
+          ))}
+        </div>
       </div>
     </section>
   )

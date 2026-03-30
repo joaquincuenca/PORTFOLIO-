@@ -166,3 +166,130 @@ body {
 * {
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
+
+
+
+/* Cloud Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  75% {
+    transform: translateY(5px) translateX(-5px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes floatCloud {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(20px) translateY(-10px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(240, 180, 41, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(240, 180, 41, 0.6);
+  }
+}
+
+/* Apply animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite;
+}
+
+.animate-float-cloud {
+  animation: floatCloud 8s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Glass morphism utility classes */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-light {
+  background: rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Cloud text effect */
+.cloud-text {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.cloud-text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.cloud-text:hover::after {
+  transform: scaleX(1);
+}
+
+/* Cloud Theme Variables */
+:root {
+  --cloud-gradient: linear-gradient(135deg, rgba(240, 180, 41, 0.1) 0%, rgba(255, 209, 102, 0.05) 100%);
+  --cloud-shadow: 0 8px 32px rgba(240, 180, 41, 0.1);
+}
+
+:root.light {
+  --cloud-gradient: linear-gradient(135deg, rgba(212, 160, 23, 0.08) 0%, rgba(230, 180, 34, 0.03) 100%);
+  --cloud-shadow: 0 8px 32px rgba(212, 160, 23, 0.08);
+}
+
+/* Glass Card Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(240, 180, 41, 0.3);
+  transform: translateY(-4px);
+  box-shadow: var(--cloud-shadow);
+}
