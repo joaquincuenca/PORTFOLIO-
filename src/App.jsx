@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { ThemeProvider } from './context/ThemeContext'  // ← THIS IS MISSING!
+import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Cursor from './components/layout/Cursor'
@@ -13,7 +13,6 @@ import ThemeToggle from './components/ui/ThemeToggle'
 
 function App() {
   useEffect(() => {
-    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault()
@@ -26,7 +25,7 @@ function App() {
   }, [])
 
   return (
-    <ThemeProvider>  {/* ← WRAP EVERYTHING WITH THEME PROVIDER */}
+    <ThemeProvider>
       <ThemeToggle />
       <Scroll />
       <Cursor />

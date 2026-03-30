@@ -35,7 +35,7 @@ const Contact = () => {
             Location
           </div>
           <span className="text-[15px] font-semibold text-white">
-            Philippines 🇵🇭
+            Philippines
           </span>
         </div>
         
