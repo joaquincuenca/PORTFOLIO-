@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { ThemeProvider } from './context/ThemeContext'  // ← THIS IS MISSING!
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Cursor from './components/layout/Cursor'
@@ -8,6 +9,7 @@ import Services from './components/sections/Services'
 import Projects from './components/sections/Projects'
 import Contact from './components/sections/Contact'
 import Scroll from './components/common/ScrollIndicator'
+import ThemeToggle from './components/ui/ThemeToggle'
 
 function App() {
   useEffect(() => {
@@ -24,7 +26,8 @@ function App() {
   }, [])
 
   return (
-    <>
+    <ThemeProvider>  {/* ← WRAP EVERYTHING WITH THEME PROVIDER */}
+      <ThemeToggle />
       <Scroll />
       <Cursor />
       <Navbar />
@@ -34,7 +37,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
-    </>
+    </ThemeProvider>
   )
 }
 
