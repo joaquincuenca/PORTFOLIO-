@@ -1,0 +1,101 @@
+/* Additional animations and hover effects */
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(240, 180, 41, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(240, 180, 41, 0.6);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.glow-on-hover:hover {
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+/* Transition for all interactive elements */
+a, button, .svc-card, .proj-row, .pill {
+  transition: all 0.3s ease;
+}
+
+/* Smooth image loading */
+img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+/* Hover scale effect for cards */
+.svc-card:hover,
+.proj-row:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Scroll Wheel Animation */
+@keyframes scrollWheel {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.animate-scroll-wheel {
+  animation: scrollWheel 2s ease-in-out infinite;
+}
+
+/* Pulse Animation for Indicator */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* Fade In Animation for Sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-enter {
+  animation: fadeInUp 0.6s ease forwards;
+}
