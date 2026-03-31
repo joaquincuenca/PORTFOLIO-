@@ -10,6 +10,7 @@ import Projects from './components/sections/Projects'
 import Contact from './components/sections/Contact'
 import Scroll from './components/common/ScrollIndicator'
 import ThemeToggle from './components/ui/ThemeToggle'
+import WelcomePopup from './components/ui/WelcomePopup'  // ← Make sure this is imported
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <ThemeProvider>
+      <WelcomePopup />
       <ThemeToggle />
       <Scroll />
       <Cursor />
