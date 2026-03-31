@@ -99,3 +99,244 @@ img.loaded {
 .section-enter {
   animation: fadeInUp 0.6s ease forwards;
 }
+
+
+/* Add to your global CSS file for 3D text effects */
+
+@keyframes float-3d {
+  0%, 100% {
+    transform: translateZ(20px) translateY(0px);
+  }
+  50% {
+    transform: translateZ(30px) translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    filter: blur(20px);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(30px);
+  }
+}
+
+.animate-float-3d {
+  animation: float-3d 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+/* 3D Text Rendering */
+.font-display {
+  font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+/* Preserve 3D for children */
+.transform-gpu {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Smooth 3D transitions */
+.group:hover .group-hover\:translate-y-0 {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced scrollbar for stats strip */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #DAA520, #FFD700);
+  border-radius: 4px;
+}
+
+/* Add to your global CSS file */
+
+/* Smooth theme transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* 3D Text Rendering */
+.font-display {
+  font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+/* Preserve 3D for children */
+.transform-gpu {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Smooth 3D transitions */
+.group:hover .group-hover\:translate-y-0 {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom gold colors for light/dark mode */
+:root {
+  --gold-light: #DAA520;
+  --gold-dark: #B8860B;
+  --gold2-light: #FFD700;
+  --gold2-dark: #FFA500;
+}
+
+.dark {
+  --gold: var(--gold-light);
+  --gold2: var(--gold2-light);
+}
+
+.light {
+  --gold: var(--gold-dark);
+  --gold2: var(--gold2-dark);
+}
+
+/* Animation keyframes */
+@keyframes float-3d {
+  0%, 100% {
+    transform: translateZ(20px) translateY(0px);
+  }
+  50% {
+    transform: translateZ(30px) translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    filter: blur(20px);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(30px);
+  }
+}
+
+.animate-float-3d {
+  animation: float-3d 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}
+
+/* Enhanced scrollbar for stats strip */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.dark .overflow-x-auto::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #DAA520, #FFD700);
+  border-radius: 4px;
+}
+
+/* Light mode specific adjustments */
+.light .bg-gradient-to-br {
+  --tw-gradient-stops: #f9fafb, #ffffff, #f3f4f6;
+}
+
+/* Improve contrast in light mode */
+.light .text-grey {
+  color: #4b5563;
+}
+
+.light .border-grey\/30 {
+  border-color: rgba(107, 114, 128, 0.3);
+}
+
+/* Smooth dark mode transitions for specific elements */
+.dark .bg-white\/5 {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.light .bg-black\/5 {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Simple fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Simple bounce */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+/* Simple pulse */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Transition utilities */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.duration-400 {
+  transition-duration: 400ms;
+}
