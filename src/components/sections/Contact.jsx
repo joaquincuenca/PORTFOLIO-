@@ -5,9 +5,9 @@ import Button from '../ui/Button'
 const Contact = () => {
   return (
     <section id="contact" className="grid md:grid-cols-2 border-b border-white/10 min-h-[60vh]">
-      <RevealOnScroll className="p-8 md:p-12 lg:p-24 border-r border-white/10 flex flex-col justify-between">
+      <RevealOnScroll className="p-8 md:p-12 lg:p-24 flex flex-col justify-between">
         <div>
-          <div className="flex items-center gap-2 mb-4 font-mono text-[10.5px] tracking-[0.2em] uppercase text-gold after:w-8 after:h-px after:bg-gold/50 after:ml-2">
+          <div className="flex items-center gap-2 mb-4  font-mono text-[10.5px] tracking-[0.2em] uppercase text-gold after:w-8 after:h-px after:bg-gold/50 after:ml-2">
             Get in Touch
           </div>
           <h2 className="font-display text-[clamp(60px,8vw,110px)] leading-[0.92] tracking-[-0.01em]">

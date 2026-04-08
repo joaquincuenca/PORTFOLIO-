@@ -15,7 +15,7 @@ const Services = () => {
           </div>
           <h2 className="font-display text-5xl md:text-6xl mb-4">My Services</h2>
           <p className="text-grey max-w-2xl mx-auto">
-            From interactive web apps to AR experiences — I deliver end-to-end solutions with clean code and sharp design.
+            Web App experiences — I deliver end-to-end solutions with clean code and sharp design.
           </p>
         </div>
 
