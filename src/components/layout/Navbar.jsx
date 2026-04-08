@@ -24,7 +24,7 @@ const Navbar = () => {
         <li><a href="#contact" className="text-[11px] tracking-[0.18em] uppercase text-grey font-semibold hover:text-gold transition-colors">Contact</a></li>
       </ul>
       
-      <a href="#" className="text-[11px] tracking-[0.12em] uppercase font-bold text-black bg-gold py-2.5 px-5 rounded-md hover:opacity-85 transition transform hover:-translate-y-px">
+      <a href="/cuencacv.pdf" className="text-[11px] tracking-[0.12em] uppercase font-bold text-black bg-gold py-2.5 px-5 rounded-md hover:opacity-85 transition transform hover:-translate-y-px">
         Download CV
       </a>
     </nav>

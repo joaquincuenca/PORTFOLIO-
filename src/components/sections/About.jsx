@@ -20,8 +20,7 @@ const About = () => {
             </h2>
             <p className="text-grey leading-relaxed mb-6">
               I'm a Full-Stack Developer based in the Philippines with 5+ years of coding experience. 
-              I build modern web applications, clean UIs, and full-stack systems — from augmented reality 
-              museum guides to cloud-based logistics platforms.
+              I build modern web applications, clean UIs, and full-stack systems
             </p>
             <p className="text-grey leading-relaxed">
               Passionate about merging solid engineering with thoughtful design to ship experiences that actually work.

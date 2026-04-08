@@ -98,11 +98,11 @@ const Hero = () => {
         <p className="text-gray-600 dark:text-grey text-sm sm:text-base md:text-lg max-w-full sm:max-w-xl md:max-w-2xl leading-relaxed mb-6 sm:mb-8 transform-gpu"
            style={{ transform: 'translateZ(20px)' }}>
           <span className="relative inline-block">
-            I build web app systems and clean UIs. Full-stack developer based in the Philippines, 
-            crafting modern digital experiences from AR to cloud-based web apps.
+            I build web app systems and clean UIs. Full-stack developer based in the Philippines,
+            crafting modern digital experiences web apps.
             <span className="absolute inset-0 blur-md text-gray-400/30 dark:text-grey/20 -z-10 translate-y-[1px]">
               I build web app systems and clean UIs. Full-stack developer based in the Philippines, 
-              crafting modern digital experiences from AR to cloud-based web apps.
+              crafting modern digital experiences web apps.
             </span>
           </span>
         </p>
@@ -121,7 +121,7 @@ const Hero = () => {
           </Button>
           
           <Button 
-            href="#" 
+            href="cuencacv.pdf" 
             variant="gold" 
             className="w-full sm:w-auto text-center relative group overflow-hidden bg-gradient-to-r from-amber-500 to-gold dark:from-gold dark:to-gold2 shadow-lg shadow-gold/20 dark:shadow-gold/30"
           >
