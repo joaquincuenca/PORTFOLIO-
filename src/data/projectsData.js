@@ -43,22 +43,22 @@ export const projectsData = [
 screenshots: [
       {
         title: 'Dashboard & Analytics',
-        image: '/projects/peso-dbms/1.png',
+        image: '/peso-dbms/1.png',
         description: 'Aggregate statistics, category distribution, and registration activity.'
       },
       {
         title: 'Applicant Management',
-        image: '/projects/peso-dbms/2.png',
+        image: '/peso-dbms/2.png',
         description: 'Applicant category summaries, search, filters, and record-management controls. Individual records are concealed.'
       },
       {
         title: 'Job Applicant Registry',
-        image: '/projects/peso-dbms/3.png',
+        image: '/peso-dbms/3.png',
         description: 'Monthly registry tools, search, export, backup, and restore. Individual entries are concealed.'
       },
       {
         title: 'DSWD Management',
-        image: '/projects/peso-dbms/4.png',
+        image: '/peso-dbms/4.png',
         description: 'Livelihood association summaries, program filters, and status tracking. individual entries are concealed.'
       },
     ]
