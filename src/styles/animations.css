@@ -32,10 +32,7 @@ a, button, .svc-card, .proj-row, .pill {
 }
 
 /* Smooth image loading */
-img {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+
 
 img.loaded {
   opacity: 1;
