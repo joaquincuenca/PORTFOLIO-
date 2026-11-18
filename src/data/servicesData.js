@@ -3,13 +3,13 @@ export const servicesData = [
     num: '01',
     name: 'Web App Development',
     desc: 'Modern, full-stack web applications using React, Next.js, Vite, Tailwind CSS, and Supabase. Fast, clean, and production-ready.',
-    tags: 'React · Next.js · Supabase'
+    tags: 'React · Node.js · Supabase · Tailwind CSS · Vite · Exprees.js'
   },
-  {
+    {
     num: '02',
-    name: 'Mobile + Unity Apps',
-    desc: 'Android and Unity-based mobile apps using C# for gamified interfaces, IoT integrations, and real-time data monitoring.',
-    tags: 'Unity · C# · Android'
+    name: 'ICT Support',
+    desc: 'Reliable technical assistance for hardware and software issues, computer and peripheral maintenance, network connectivity, system troubleshooting, and day-to-day office IT needs.',
+    tags: 'Technical Support · Troubleshooting · System Maintenance'
   },
   {
     num: '03',
@@ -19,8 +19,10 @@ export const servicesData = [
   },
   {
     num: '04',
-    name: 'Augmented Reality Apps',
-    desc: 'Building immersive AR experiences using Unity and Vuforia — from museum guides to educational apps. Offline-capable and cross-platform.',
-    tags: 'Unity · Vuforia · C#'
-  }
+    name: 'MobileApps',
+    desc: 'Android and Unity-based mobile apps using C# for gamified interfaces, IoT integrations, and real-time data monitoring.',
+    tags: 'Unity · C# · Android · Kotlin'
+  },
+
+
 ]
